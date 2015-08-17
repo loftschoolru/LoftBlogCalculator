@@ -221,7 +221,10 @@ public class MainActivity extends AppCompatActivity {
         btnEquals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calculatorEngine(EQUALS);
+                String checkEmptyDisplay = display.getText().toString();
+                if (! checkEmptyDisplay.isEmpty()) {
+                    calculatorEngine(EQUALS);
+                }
             }
         });
 
